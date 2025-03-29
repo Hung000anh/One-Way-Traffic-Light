@@ -50,33 +50,56 @@ if (i == 0){
 }
 }            
 void loop(){
-for (int i = 5;i>=0;i--) { //Đèn đỏ ngang bật 5s
-  displaynumber(i);
-  digitalWrite(8, HIGH);  
-  digitalWrite(13, HIGH); 
-  if(i == 0)
+  for (int i =5; i >= 0; i--)
   {
-    digitalWrite(12, HIGH); 
-    digitalWrite(13, LOW); 
+    displaynumber(i);
+    digitalWrite(8, HIGH);  
+    delay(1000);
   }
-  delay(1000);
-}
-for (int i = 5;i>=0;i--) { //Đèn xanh ngang bật 3s
-  displaynumber(i);
-  digitalWrite(12, LOW); 
-  digitalWrite(8, LOW); 
-  digitalWrite(11, HIGH); 
+  digitalWrite(8, LOW);
+  for (int i =2; i >= 0; i--)
+  {
+    displaynumber(i);
+    digitalWrite(9, HIGH);  
+    delay(1000);
+  }
+  digitalWrite(9, LOW); 
+
+  for (int i =3; i >= 0; i--)
+  {
+    displaynumber(i);
+    digitalWrite(10, HIGH);  
+    delay(1000);
+  }
+  digitalWrite(10, LOW); 
+
+// for (int i = 5;i>=0;i--) { //Đèn đỏ ngang bật 5s
+//   displaynumber(i);
+//   digitalWrite(8, HIGH);  
+//   digitalWrite(13, HIGH); 
+//   if(i == 0)
+//   {
+//     digitalWrite(12, HIGH); 
+//     digitalWrite(13, LOW); 
+//   }
+//   delay(1000);
+// }
+// for (int i = 5;i>=0;i--) { 
+//   displaynumber(i);
+//   digitalWrite(12, LOW); 
+//   digitalWrite(8, LOW); 
+//   digitalWrite(11, HIGH); 
 
 
-  digitalWrite(10, HIGH); 
-  if(i == 0)
-  {
-    digitalWrite(9, HIGH); 
-    digitalWrite(10, LOW); 
-  }
+//   digitalWrite(10, HIGH); 
+//   if(i == 0)
+//   {
+//     digitalWrite(9, HIGH); 
+//     digitalWrite(10, LOW); 
+//   }
   
-  delay(1000);
-}
-  digitalWrite(9, LOW);
-  digitalWrite(11, LOW);
+//   delay(1000);
+// }
+//   digitalWrite(9, LOW);
+//   digitalWrite(11, LOW);
 }
